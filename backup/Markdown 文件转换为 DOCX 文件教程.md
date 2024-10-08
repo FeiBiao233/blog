@@ -1,4 +1,3 @@
-
 # Markdown 文件转换为 DOCX 文件教程
 
 本文将介绍如何使用 Python 将 `.md` 文件转换为 `.docx` 文件。我们将使用 `pypandoc` 库，并提供了 Pandoc 安装指南，确保转换过程顺利进行。
@@ -29,9 +28,9 @@ pip install pypandoc
 
 #### 1.3.1 从官网安装 Pandoc
 
-1. 前往 [Pandoc 官方下载页面](https://pandoc.org/installing.html)。
+1. 前往 [Pandoc 官方下载页面](https://github.com/jgm/pandoc/releases)。
 2. 根据你的操作系统选择相应的安装包并进行安装。
-   - Windows 用户可以下载 `.msi` 文件进行安装。
+   - Windows 用户可以下载 `.msi` 文件进行安装或者直接下载压缩包。
    - macOS 用户可以使用 Homebrew 安装：
      ```bash
      brew install pandoc
