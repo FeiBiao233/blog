@@ -129,24 +129,24 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-k">import</span> <span class="pl-s1">pypandoc</span>
 
 <span class="pl-c"># 下载 Pandoc 工具（如果尚未安装）</span>
-<span class="pl-s1">pypandoc</span>.<span class="pl-en">download_pandoc</span>()
+<span class="pl-s1">pypandoc</span>.<span class="pl-c1">download_pandoc</span>()
 
 <span class="pl-c"># 定义文件夹路径</span>
 <span class="pl-s1">input_folder</span> <span class="pl-c1">=</span> <span class="pl-s">r'D:\Files\Code\Markdown'</span>
 <span class="pl-s1">output_folder</span> <span class="pl-c1">=</span> <span class="pl-s">r'D:\Files\Code\Docx'</span>
 
 <span class="pl-c"># 确保输出文件夹存在</span>
-<span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">os</span>.<span class="pl-s1">path</span>.<span class="pl-en">exists</span>(<span class="pl-s1">output_folder</span>):
-    <span class="pl-s1">os</span>.<span class="pl-en">makedirs</span>(<span class="pl-s1">output_folder</span>)
+<span class="pl-k">if</span> <span class="pl-c1">not</span> <span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">exists</span>(<span class="pl-s1">output_folder</span>):
+    <span class="pl-s1">os</span>.<span class="pl-c1">makedirs</span>(<span class="pl-s1">output_folder</span>)
 
 <span class="pl-c"># 获取所有 .md 文件</span>
-<span class="pl-k">for</span> <span class="pl-s1">filename</span> <span class="pl-c1">in</span> <span class="pl-s1">os</span>.<span class="pl-en">listdir</span>(<span class="pl-s1">input_folder</span>):
-    <span class="pl-k">if</span> <span class="pl-s1">filename</span>.<span class="pl-en">endswith</span>(<span class="pl-s">'.md'</span>):
-        <span class="pl-s1">input_file</span> <span class="pl-c1">=</span> <span class="pl-s1">os</span>.<span class="pl-s1">path</span>.<span class="pl-en">join</span>(<span class="pl-s1">input_folder</span>, <span class="pl-s1">filename</span>)
-        <span class="pl-s1">output_file</span> <span class="pl-c1">=</span> <span class="pl-s1">os</span>.<span class="pl-s1">path</span>.<span class="pl-en">join</span>(<span class="pl-s1">output_folder</span>, <span class="pl-s1">filename</span>.<span class="pl-en">replace</span>(<span class="pl-s">'.md'</span>, <span class="pl-s">'.docx'</span>))
+<span class="pl-k">for</span> <span class="pl-s1">filename</span> <span class="pl-c1">in</span> <span class="pl-s1">os</span>.<span class="pl-c1">listdir</span>(<span class="pl-s1">input_folder</span>):
+    <span class="pl-k">if</span> <span class="pl-s1">filename</span>.<span class="pl-c1">endswith</span>(<span class="pl-s">'.md'</span>):
+        <span class="pl-s1">input_file</span> <span class="pl-c1">=</span> <span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">join</span>(<span class="pl-s1">input_folder</span>, <span class="pl-s1">filename</span>)
+        <span class="pl-s1">output_file</span> <span class="pl-c1">=</span> <span class="pl-s1">os</span>.<span class="pl-c1">path</span>.<span class="pl-c1">join</span>(<span class="pl-s1">output_folder</span>, <span class="pl-s1">filename</span>.<span class="pl-c1">replace</span>(<span class="pl-s">'.md'</span>, <span class="pl-s">'.docx'</span>))
         
         <span class="pl-c"># 使用 pypandoc 将 Markdown 文件转换为 docx</span>
-        <span class="pl-s1">pypandoc</span>.<span class="pl-en">convert_file</span>(<span class="pl-s1">input_file</span>, <span class="pl-s">'docx'</span>, <span class="pl-s1">outputfile</span><span class="pl-c1">=</span><span class="pl-s1">output_file</span>)
+        <span class="pl-s1">pypandoc</span>.<span class="pl-c1">convert_file</span>(<span class="pl-s1">input_file</span>, <span class="pl-s">'docx'</span>, <span class="pl-s1">outputfile</span><span class="pl-c1">=</span><span class="pl-s1">output_file</span>)
         <span class="pl-en">print</span>(<span class="pl-s">f"转换完成：<span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">input_file</span><span class="pl-kos">}</span></span> -&gt; <span class="pl-s1"><span class="pl-kos">{</span><span class="pl-s1">output_file</span><span class="pl-kos">}</span></span>"</span>)
 
 <span class="pl-en">print</span>(<span class="pl-s">"所有文件已转换完成。"</span>)</pre></div>
